@@ -6,11 +6,11 @@ There are two modes of operation
 
 - `A)`:  Seal/Unseal:
 
-      Encrypt and Decrypt a JWE using a TPM backed key.  Use this if you are encryptin/decrypting on the same VM/system where the TPM exists. 
+    Encrypt and Decrypt a JWE using a TPM backed key.  Use this if you are encryptin/decrypting on the same VM/system where the TPM exists. 
 
 - `B)`: Remote Encryption (Duplicate/Import)
 
-      This mode allows you to encrypt data remotely by using a target TPM's `Endorsement Public Key`, `Storage Root Key (SRK)` or with one based off of its `H2 Template`.  You can use the PEM formatted public key to encrypt data such that it can **only** get decrypted by the destination TPM
+    This mode allows you to encrypt data remotely by using a target TPM's `Endorsement Public Key`, `Storage Root Key (SRK)` or with one based off of its `H2 Template`.  You can use the PEM formatted public key to encrypt data such that it can **only** get decrypted by the destination TPM
 
 In both modes, you can specify certain policies around the TPM backed key to do the decryption.  Namely, you can stipulate that access to decrypt the data is gated on the user providing a passphrase or the system having certain `PCR` values
 
